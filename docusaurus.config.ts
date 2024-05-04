@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import type * as PluginContentBlog from "@docusaurus/plugin-content-blog"
 
 const config: Config = {
   title: "T.H.",
@@ -29,6 +30,24 @@ const config: Config = {
     locales: ["en"],
   },
 
+
+  plugins: [
+    // ['@docusaurus/plugin-content-blog',
+    // {
+    //   id: 'first-blog',
+    //   routeBasePath: 'blog',
+    //   path: './blog',
+    //   showReadingTime: true,
+    // }],
+    ['@docusaurus/plugin-content-blog',
+    {
+      id: 'second-blog',
+      routeBasePath: 'second-blog',
+      path: './blog2',
+      showReadingTime: true,
+    }]
+  ],
+
   presets: [
     [
       "classic",
@@ -41,6 +60,7 @@ const config: Config = {
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
+          id: '1',
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -71,11 +91,13 @@ const config: Config = {
           label: "Tutorial",
         },
         { to: "/blog", label: "Blog", position: "left" },
-        {
-          href: "https://github.com/facebook/docusaurus",
-          label: "GitHub",
-          position: "right",
-        },
+        { to: "/second-blog", label: "Blog2", position: "left" },
+        { to: "/100list", label: "100 List", position: "left" },
+        // {
+        //   href: "https://github.com/facebook/docusaurus",
+        //   label: "GitHub",
+        //   position: "right",
+        // },
       ],
     },
     footer: {
