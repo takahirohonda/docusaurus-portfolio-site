@@ -1,12 +1,11 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
-import type * as PluginContentBlog from "@docusaurus/plugin-content-blog"
 
 const config: Config = {
-  title: "T.H.",
+  title: "Takahiro Honda",
   tagline: "Imperfection is the finger print of your soul...",
-  favicon: "img/favicon.ico",
+  favicon: "img/icon-circle.png",
 
   // Set the production url of your site here
   url: "https://your-docusaurus-site.example.com",
@@ -32,13 +31,6 @@ const config: Config = {
 
 
   plugins: [
-    // ['@docusaurus/plugin-content-blog',
-    // {
-    //   id: 'first-blog',
-    //   routeBasePath: 'blog',
-    //   path: './blog',
-    //   showReadingTime: true,
-    // }],
     ['@docusaurus/plugin-content-blog',
     {
       id: 'second-blog',
@@ -54,18 +46,10 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           id: '1',
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -78,10 +62,10 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "Taka Honda",
       logo: {
         alt: "My Site Logo",
-        src: "img/logo.svg",
+        src: "img/icon-circle.png",
       },
       items: [
         {
