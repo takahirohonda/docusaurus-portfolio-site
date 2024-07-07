@@ -15,7 +15,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "mydatahack", // Usually your GitHub org/user name.
+  organizationName: "mdh", // Usually your GitHub org/user name.
   projectName: "docusaurus-portfolio-site", // Usually your repo name.
 
   onBrokenLinks: "throw",
@@ -29,15 +29,16 @@ const config: Config = {
     locales: ["en"],
   },
 
-
   plugins: [
-    ['@docusaurus/plugin-content-blog',
-    {
-      id: 'second-blog',
-      routeBasePath: 'second-blog',
-      path: './blog2',
-      showReadingTime: true,
-    }]
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "second-blog",
+        routeBasePath: "second-blog",
+        path: "./blog2",
+        showReadingTime: true,
+      },
+    ],
   ],
 
   presets: [
@@ -48,7 +49,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
         },
         blog: {
-          id: '1',
+          id: "1",
           showReadingTime: true,
         },
         theme: {
@@ -97,19 +98,11 @@ const config: Config = {
           ],
         },
         {
-          title: "Community",
+          title: "Connect",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "YouTube",
+              href: "https://www.youtube.com/@takahondamusic",
             },
           ],
         },
@@ -122,12 +115,12 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/takahirohonda",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Takahiro Honda`,
+      copyright: `Copyright © ${new Date().getFullYear()} TH`,
     },
     prism: {
       theme: prismThemes.github,
