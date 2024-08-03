@@ -39,3 +39,19 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+### Adding Tailwind
+
+1. Install dependencies
+
+```bash
+yarn add -D tailwindcss postcss autoprefixer
+```
+
+2. Create config and update it.
+
+```bash
+npx tailwindcss init # or just add tailwind.config.js
+```
+
+3. Follow the rest of the steps in this blog: https://medium.com/@bargadyahmed/docusaurus-a-guide-to-seamless-integration-with-tailwind-css-dd202211caac
