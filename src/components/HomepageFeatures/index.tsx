@@ -1,7 +1,5 @@
 import clsx from "clsx";
 
-import styles from "./styles.module.css";
-
 export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={clsx(`flex items-center justify-center`)}>
