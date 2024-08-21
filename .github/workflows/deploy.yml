@@ -28,4 +28,13 @@ jobs:
           yarn build
           pwd
 
-## Todo: add deployment steps
+      - name: Deploy to Github page
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          ACCESS_TOKEN: ${{ secrets.TK_BLOG_DEPLOY  }}
+          BRANCH: master # The branch the action should deploy to.
+          FOLDER: build # The folder the action should deploy.
+          REPOSITORY_NAME: takahirohonda/takahirohonda.github.io
+          TARGET_FOLDER: tk-blog
+          CLEAN: true # Automatically remove deleted files from the deploy branch
+
