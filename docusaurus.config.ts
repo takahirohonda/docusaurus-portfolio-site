@@ -49,6 +49,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
+          // for gitpage
+          routeBasePath: "/tk-blog",
         },
         blog: {
           id: "1",
