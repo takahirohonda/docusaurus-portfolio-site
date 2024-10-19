@@ -65,11 +65,11 @@ const config: Config = {
     [
       "classic",
       {
-        docs: {
-          sidebarPath: "./sidebars.ts",
-          // for gitpage
-          routeBasePath: "/",
-        },
+        // docs: {
+        //   sidebarPath: "./sidebars.ts",
+        //   // for gitpage
+        //   routeBasePath: "/",
+        // },
         blog: {
           id: "1",
           showReadingTime: true,
