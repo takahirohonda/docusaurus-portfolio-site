@@ -41,35 +41,35 @@ const config: Config = {
         showReadingTime: true,
       },
     ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "first-docs",
-        path: "docs", // path to the first docs folder
-        routeBasePath: "docs",
-        sidebarPath: "./sidebars.ts",
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "second-docs",
-        path: "docs2", // path to the second docs folder
-        routeBasePath: "second-docs",
-        sidebarPath: "./sidebars2.ts",
-      },
-    ],
+    // [
+    //   "@docusaurus/plugin-content-docs",
+    //   {
+    //     id: "first-docs",
+    //     path: "docs", // path to the first docs folder
+    //     routeBasePath: "docs",
+    //     sidebarPath: "./sidebars.ts",
+    //   },
+    // ],
+    // [
+    //   "@docusaurus/plugin-content-docs",
+    //   {
+    //     id: "second-docs",
+    //     path: "docs2", // path to the second docs folder
+    //     routeBasePath: "second-docs",
+    //     sidebarPath: "./sidebars2.ts",
+    //   },
+    // ],
   ],
 
   presets: [
     [
-      "classic",
+      "./preset-multi-docs.ts",
       {
-        // docs: {
-        //   sidebarPath: "./sidebars.ts",
-        //   // for gitpage
-        //   routeBasePath: "/",
-        // },
+        docs: {
+          sidebarPath: "./sidebars.ts",
+          // for gitpage
+          routeBasePath: "/",
+        },
         blog: {
           id: "1",
           showReadingTime: true,
@@ -97,12 +97,12 @@ const config: Config = {
           position: "left",
           label: "Doc 1",
         },
-        {
-          type: "docSidebar",
-          sidebarId: "secondDocSidebar",
-          position: "left",
-          label: "Doc 2",
-        },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "secondDocSidebar",
+        //   position: "left",
+        //   label: "Doc 2",
+        // },
 
         { to: "/blog", label: "Blog", position: "left" },
         { to: "/second-blog", label: "Blog2", position: "left" },
