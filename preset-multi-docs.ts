@@ -1,7 +1,7 @@
 // @ts-nocheck
+// this doesn't seem to work...
 export default function preset(context, opts = {}) {
   return {
-    themes: [["docusaurus-theme-awesome", opts.theme]],
     plugins: [
       // Using three docs plugins at the same time!
       // Assigning a unique ID for each without asking the user to do it

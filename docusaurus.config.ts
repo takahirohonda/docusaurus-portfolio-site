@@ -41,29 +41,29 @@ const config: Config = {
         showReadingTime: true,
       },
     ],
-    // [
-    //   "@docusaurus/plugin-content-docs",
-    //   {
-    //     id: "first-docs",
-    //     path: "docs", // path to the first docs folder
-    //     routeBasePath: "docs",
-    //     sidebarPath: "./sidebars.ts",
-    //   },
-    // ],
-    // [
-    //   "@docusaurus/plugin-content-docs",
-    //   {
-    //     id: "second-docs",
-    //     path: "docs2", // path to the second docs folder
-    //     routeBasePath: "second-docs",
-    //     sidebarPath: "./sidebars2.ts",
-    //   },
-    // ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "first-docs",
+        path: "docs", // path to the first docs folder
+        routeBasePath: "docs",
+        sidebarPath: "./sidebars.ts",
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "second-docs",
+        path: "docs2", // path to the second docs folder
+        routeBasePath: "second-docs",
+        sidebarPath: "./sidebars2.ts",
+      },
+    ],
   ],
 
   presets: [
     [
-      "./preset-multi-docs.ts",
+      "classic",
       {
         docs: {
           sidebarPath: "./sidebars.ts",
