@@ -4,7 +4,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
-import "react-image-gallery/styles/css/image-gallery.css";
+
 import styles from "./index.module.css";
 import { WirSuchenDichFromInternet } from "../components/BlogSpecific/WirSuchenDich/WirSuchenDichFromInternet";
 
