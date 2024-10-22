@@ -1,5 +1,4 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
-const flowbite = require("flowbite-react/tailwind");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,7 +7,7 @@ module.exports = {
     container: false,
   },
   darkMode: ["class", '[data-theme="dark"]'],
-  content: ["./src/**/*.{jsx,tsx,html}", flowbite.content()],
+  content: ["./src/**/*.{jsx,tsx,html}"],
   theme: {
     extend: {
       fontFamily: {
@@ -26,5 +25,5 @@ module.exports = {
       colors: {},
     },
   },
-  plugins: [flowbite.plugin()],
+  plugins: [],
 };
