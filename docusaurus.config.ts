@@ -44,19 +44,19 @@ const config: Config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "first-docs",
-        path: "docs", // path to the first docs folder
-        routeBasePath: "docs",
-        sidebarPath: "./sidebars.ts",
+        id: "my-projects",
+        path: "my-projects", // path to the second docs folder
+        routeBasePath: "my-projects",
+        sidebarPath: "./sidebars2.ts",
       },
     ],
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "second-docs",
-        path: "docs2", // path to the second docs folder
-        routeBasePath: "second-docs",
-        sidebarPath: "./sidebars2.ts",
+        id: "morbid-curiosity",
+        path: "morbid-curiosity", // path to the second docs folder
+        routeBasePath: "morbid-curiosity",
+        sidebarPath: "./sidebars3.ts",
       },
     ],
   ],
@@ -67,8 +67,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          // for gitpage
-          routeBasePath: "/",
+          path: "docs",
         },
         blog: {
           id: "1",
@@ -92,17 +91,19 @@ const config: Config = {
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "firstDocSidebar",
+          label: "Morbid Curiosity",
+          to: "morbid-curiosity/intro",
           position: "left",
-          label: "Doc 1",
+          docsPluginId: "morbid-curiosity",
+          activeBasePath: "morbid-curiosity",
         },
-        // {
-        //   type: "docSidebar",
-        //   sidebarId: "secondDocSidebar",
-        //   position: "left",
-        //   label: "Doc 2",
-        // },
+        {
+          label: "My Projects",
+          to: "my-projects/intro",
+          position: "left",
+          docsPluginId: "my-projects",
+          activeBasePath: "my-projects",
+        },
 
         { to: "/blog", label: "Blog", position: "left" },
         { to: "/second-blog", label: "Blog2", position: "left" },
