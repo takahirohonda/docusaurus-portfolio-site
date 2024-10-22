@@ -41,6 +41,24 @@ const config: Config = {
         showReadingTime: true,
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "my-projects",
+        path: "my-projects", // path to the second docs folder
+        routeBasePath: "my-projects",
+        sidebarPath: "./sidebars2.ts",
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "morbid-curiosity",
+        path: "morbid-curiosity", // path to the second docs folder
+        routeBasePath: "morbid-curiosity",
+        sidebarPath: "./sidebars3.ts",
+      },
+    ],
   ],
 
   presets: [
@@ -49,8 +67,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          // for gitpage
-          routeBasePath: "/tk-blog",
+          path: "docs",
         },
         blog: {
           id: "1",
@@ -74,11 +91,20 @@ const config: Config = {
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          label: "Morbid Curiosity",
+          to: "morbid-curiosity/intro",
           position: "left",
-          label: "Tutorial",
+          docsPluginId: "morbid-curiosity",
+          activeBasePath: "morbid-curiosity",
         },
+        {
+          label: "My Projects",
+          to: "my-projects/intro",
+          position: "left",
+          docsPluginId: "my-projects",
+          activeBasePath: "my-projects",
+        },
+
         { to: "/blog", label: "Blog", position: "left" },
         { to: "/second-blog", label: "Blog2", position: "left" },
         { to: "/100list", label: "100 List", position: "left" },

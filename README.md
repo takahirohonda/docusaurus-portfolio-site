@@ -55,3 +55,7 @@ npx tailwindcss init # or just add tailwind.config.js
 ```
 
 3. Follow the rest of the steps in this blog: https://medium.com/@bargadyahmed/docusaurus-a-guide-to-seamless-integration-with-tailwind-css-dd202211caac
+
+### Multi-doc setup
+
+This works: https://stackblitz.com/edit/github-v75b7y?file=docusaurus.config.js
