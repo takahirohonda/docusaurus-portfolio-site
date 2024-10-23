@@ -4,8 +4,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 import tailwindPlugin from "./plugins/tailwind-config.cjs";
 
 const config: Config = {
-  title: "Takahiro Honda",
-  tagline: "Art is the sublimation of shitty experiences.",
+  title: "Art is the sublimation of shitty experiences.",
+  // tagline: "Art is the sublimation of shitty experiences.",
   favicon: "img/icon-circle.png",
 
   // Set the production url of your site here
@@ -155,6 +155,11 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
     },
   } satisfies Preset.ThemeConfig,
 };
