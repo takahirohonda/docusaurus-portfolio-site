@@ -35,9 +35,18 @@ const config: Config = {
     [
       "@docusaurus/plugin-content-blog",
       {
-        id: "second-blog",
-        routeBasePath: "second-blog",
-        path: "./blog2",
+        id: "blogs-english",
+        routeBasePath: "my-blogs",
+        path: "./blogs-english",
+        showReadingTime: true,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "blogs-japanese",
+        routeBasePath: "my-japanese-blogs",
+        path: "./blogs-japanese",
         showReadingTime: true,
       },
     ],
@@ -53,9 +62,9 @@ const config: Config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "morbid-curiosity",
-        path: "morbid-curiosity",
-        routeBasePath: "morbid-curiosity",
+        id: "my-writings",
+        path: "my-writings",
+        routeBasePath: "my-writings",
         sidebarPath: "./sidebars3.ts",
       },
     ],
@@ -107,11 +116,11 @@ const config: Config = {
           activeBasePath: "my-projects",
         },
         {
-          label: "Morbid Curiosity",
-          to: "morbid-curiosity/intro",
+          label: "My Writings",
+          to: "my-writings/intro",
           position: "left",
-          docsPluginId: "morbid-curiosity",
-          activeBasePath: "morbid-curiosity",
+          docsPluginId: "my-writings",
+          activeBasePath: "my-writings",
         },
         {
           label: "Music Practice",
@@ -120,14 +129,14 @@ const config: Config = {
           docsPluginId: "music-practice",
           activeBasePath: "music-practice",
         },
-        { to: "/blog", label: "Blog", position: "left" },
-        { to: "/second-blog", label: "Blog2", position: "left" },
-        { to: "/100list", label: "100 List", position: "left" },
-        // {
-        //   href: "https://github.com/facebook/docusaurus",
-        //   label: "GitHub",
-        //   position: "right",
-        // },
+        { to: "/my-blogs", label: "My Blogs", position: "left" },
+        { to: "/my-japanese-blogs", label: "日本語のブログ", position: "left" },
+        { to: "/todo-list", label: "To Do List", position: "left" },
+        {
+          href: "https://github.com/takahirohonda/",
+          label: "GitHub",
+          position: "right",
+        },
       ],
     },
     footer: {
@@ -137,8 +146,8 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "My Projects",
+              to: "/docs/my-projects/intro",
             },
           ],
         },
@@ -156,7 +165,7 @@ const config: Config = {
           items: [
             {
               label: "Blog",
-              to: "/blog",
+              to: "/my-blogs",
             },
             {
               label: "GitHub",
