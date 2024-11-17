@@ -45,7 +45,7 @@ const config: Config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "my-projects",
-        path: "my-projects", // path to the second docs folder
+        path: "my-projects",
         routeBasePath: "my-projects",
         sidebarPath: "./sidebars2.ts",
       },
@@ -54,8 +54,17 @@ const config: Config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "morbid-curiosity",
-        path: "morbid-curiosity", // path to the second docs folder
+        path: "morbid-curiosity",
         routeBasePath: "morbid-curiosity",
+        sidebarPath: "./sidebars3.ts",
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "music-practice",
+        path: "music-practice",
+        routeBasePath: "music-practice",
         sidebarPath: "./sidebars3.ts",
       },
     ],
@@ -91,6 +100,13 @@ const config: Config = {
       },
       items: [
         {
+          label: "My Projects",
+          to: "my-projects/intro",
+          position: "left",
+          docsPluginId: "my-projects",
+          activeBasePath: "my-projects",
+        },
+        {
           label: "Morbid Curiosity",
           to: "morbid-curiosity/intro",
           position: "left",
@@ -98,13 +114,12 @@ const config: Config = {
           activeBasePath: "morbid-curiosity",
         },
         {
-          label: "My Projects",
-          to: "my-projects/intro",
+          label: "Music Practice",
+          to: "music-practice/intro",
           position: "left",
-          docsPluginId: "my-projects",
-          activeBasePath: "my-projects",
+          docsPluginId: "music-practice",
+          activeBasePath: "music-practice",
         },
-
         { to: "/blog", label: "Blog", position: "left" },
         { to: "/second-blog", label: "Blog2", position: "left" },
         { to: "/100list", label: "100 List", position: "left" },
