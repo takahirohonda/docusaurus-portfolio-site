@@ -19,7 +19,7 @@ const config: Config = {
   organizationName: "mdh", // Usually your GitHub org/user name.
   projectName: "docusaurus-portfolio-site", // Usually your repo name.
 
-  onBrokenLinks: "warn", // having trouble with gitpage...
+  onBrokenLinks: "warn", // having trouble with git page...
   onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
@@ -56,7 +56,7 @@ const config: Config = {
         id: "my-projects",
         path: "my-projects",
         routeBasePath: "my-projects",
-        sidebarPath: "./sidebars2.ts",
+        sidebarPath: "./sidebars/sidebars.ts",
       },
     ],
     [
@@ -65,16 +65,25 @@ const config: Config = {
         id: "my-writings",
         path: "my-writings",
         routeBasePath: "my-writings",
-        sidebarPath: "./sidebars3.ts",
+        sidebarPath: "./sidebars/sidebars.ts",
       },
     ],
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "music-practice",
-        path: "music-practice",
-        routeBasePath: "music-practice",
-        sidebarPath: "./sidebars3.ts",
+        id: "music-projects",
+        path: "music-projects",
+        routeBasePath: "music-projects",
+        sidebarPath: "./sidebars/sidebars.ts",
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "my-learning-notes",
+        path: "my-learning-notes",
+        routeBasePath: "my-learning-notes",
+        sidebarPath: "./sidebars/sidebars.ts",
       },
     ],
   ],
@@ -84,7 +93,7 @@ const config: Config = {
       "classic",
       {
         docs: {
-          sidebarPath: "./sidebars.ts",
+          sidebarPath: "./sidebars/sidebars.ts",
           path: "docs",
         },
         blog: {
@@ -123,11 +132,11 @@ const config: Config = {
           activeBasePath: "my-writings",
         },
         {
-          label: "Music Practice",
-          to: "music-practice/intro",
+          label: "Music Projects",
+          to: "music-projects/intro",
           position: "left",
-          docsPluginId: "music-practice",
-          activeBasePath: "music-practice",
+          docsPluginId: "music-projects",
+          activeBasePath: "music-projects",
         },
         { to: "/my-blogs", label: "My Blogs", position: "left" },
         { to: "/my-japanese-blogs", label: "日本語のブログ", position: "left" },
@@ -147,7 +156,19 @@ const config: Config = {
           items: [
             {
               label: "My Projects",
-              to: "/docs/my-projects/intro",
+              to: "/my-projects/intro",
+            },
+            {
+              label: "My Writings",
+              to: "/my-writings/intro",
+            },
+            {
+              label: "Music Projects",
+              to: "/music-projects/intro",
+            },
+            {
+              label: "My Learning Notes",
+              to: "/my-learning-notes/intro",
             },
           ],
         },
