@@ -56,3 +56,12 @@
 img[alt*="standard-blog-"] {
   width: 40%;
 }
+
+.navbar {
+  background-color: #303846;
+  color: white;
+}
+
+.navbar__items > a {
+  color: white;
+}

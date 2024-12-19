@@ -1,27 +1,6 @@
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import Heading from "@theme/Heading";
-
-import styles from "./index.module.css";
-import { WirSuchenDichFromInternet } from "../components/BlogSpecific/WirSuchenDich/WirSuchenDichFromInternet";
-
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-      </div>
-    </header>
-  );
-}
-
+import clsx from "clsx";
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -30,10 +9,10 @@ export default function Home(): JSX.Element {
       // Description will go into a meta tag in <head />
       description="blog, portfolio, art, music, creative writing, life hack"
     >
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-        <WirSuchenDichFromInternet />
+      <main className={clsx(`bg-black text-white flex flex-col grow `)}>
+        <div className="container flex flex-col justify-center items-center grow">
+          <div className="">content here</div>
+        </div>
       </main>
     </Layout>
   );
