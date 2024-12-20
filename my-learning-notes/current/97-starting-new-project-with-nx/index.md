@@ -3,6 +3,8 @@ title: Start new project with Nx
 sidebar_position: 97
 ---
 
+## Starting Nx project for next and react app
+
 Starting a new React project has been always confusing. I used to have a repo with all the webpack configs, eslint and jest set up and copy and paste the entire thing. I tried `create-react-app` as well.
 
 Now I am using Nx to create a multiple projects in one repo. In this way, I can create multiple react apps and next apps along with libraries to be shared between these apps.
@@ -26,6 +28,42 @@ nx g @nx/next:lib libs/my-next-lib
 ```
 
 Then, I update `.prettierrc` and `project.json` in the react app folder to support `yarn nx dev ...` command instead of using the default `serve` to align with next command. Additional eslint rules as well if necessary.
+
+## 2. Starting Nx project for Next, React and Hardhat
+
+### 2-1. Setting up hardhat and frontend app
+
+It's better to start with hardhat as it will install all the dependencies.
+
+```bash
+yarn add hardhat -D
+# initialise hardhat in the current directory
+npx hardhat init
+# move the code and config (including tsconfig) into a temp folder, temp-hardhat
+
+# Add nx lib
+yarn add nx@latest -D
+yarn nx init
+# Node - create project and move code from temp-hardhat
+yarn nx add @nx/node
+yarn nx g @nx/node:application apps/hardhat
+
+# Next js
+yarn nx add @nx/next
+yarn nx g @nx/next:app apps/next-auth
+# Add react lib - need to configure tailwind and next ui because no option to add automatically with this command
+nx g @nx/next:library libs/utils-wagmi
+nx g @nx/next:library libs/ui-components
+```
+
+### 2-2 Setting up Wagmi, adding Next UI
+
+```bash
+yarn add wagmi viem@2.x @tanstack/react-query
+
+# https://nextui.org/docs/guide/installation
+yarn @nextui-org/react framer-motion
+```
 
 ## In progress...
 
