@@ -65,3 +65,7 @@ img[alt*="standard-blog-"] {
 .navbar__items > a {
   color: white;
 }
+
+.home-bg {
+  background: linear-gradient(90deg, #284484 0%, #182848 100%);
+}
