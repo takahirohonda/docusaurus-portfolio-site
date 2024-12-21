@@ -1,8 +1,8 @@
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Layout from "@theme/Layout";
-import clsx from "clsx";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import Layout from '@theme/Layout'
+import clsx from 'clsx'
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext()
   return (
     <Layout
       title={`Home | ${siteConfig.title}`}
@@ -25,30 +25,27 @@ export default function Home(): JSX.Element {
             `
             )}
           >
-            <div className="w-[560px] h-[315px]">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/videoseries?si=b6hnLyz4gx-mbcBt&amp;list=PLl3_a4EzgdPozGQyARnTZzjLbCmm6_25N"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
-            <div className="w-[560px] h-[315px]">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/uDbUE3jxxqE?si=F9rby9AK1qEwVjHj"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/videoseries?si=b6hnLyz4gx-mbcBt&amp;list=PLl3_a4EzgdPozGQyARnTZzjLbCmm6_25N"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/uDbUE3jxxqE?si=F9rby9AK1qEwVjHj"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
           </div>
           <h1>About</h1>
           <img
@@ -58,5 +55,5 @@ export default function Home(): JSX.Element {
         </div>
       </main>
     </Layout>
-  );
+  )
 }
