@@ -35,6 +35,7 @@ jobs:
           BRANCH: master # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
           REPOSITORY_NAME: takahirohonda/takahirohonda.github.io
-          TARGET_FOLDER: tk-blog
+          # No need to have target folder if I'm just deploying to the root
+          # TARGET_FOLDER: tk-blog
           CLEAN: true # Automatically remove deleted files from the deploy branch
 
