@@ -12,9 +12,7 @@ const config: Config = {
   url: 'https://takahirohonda.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  // baseUrl: "/tk-blog",
-  // deploying this project to the root of my GitHub page
-  baseUrl: '/',
+  baseUrl: '/tk-blog',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
